@@ -1,0 +1,156 @@
+body{
+  background: #111;
+}
+
+.spinner{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #111;
+  z-index: 10;
+}
+
+.spinner img{
+  width: 70px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+}
+
+button:focus{
+  outline:0;
+}
+
+.gallery__view{
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gallery__thumbs-wrapper{
+  position: fixed;
+  bottom: 0;
+  background: rgb(0,0,0);
+  background: rgba(0,0,0,0.5);
+}
+
+.gallery__thumbs{
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 15px 0;
+}
+
+.gallery__thumbs-img img {
+  width: 100%;
+}
+
+.thumb{
+  width: 16%;
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.thumb__link{
+  display: block;
+  border: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.thumb__img{
+  border:0;
+  width:100%;
+  position: relative;
+  -webkit-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  -webkit-transform: scale(0.9); 
+  -o-transform: scale(0.9); 
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(0.9); 
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(0.9);
+  transition: all 200ms ease-in;
+  transform: scale(0.9);   
+}
+
+.thumb__img:hover{
+  box-shadow: 0 0 30px #222;
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.1);
+  -o-transition: all 200ms ease-in;
+  -o-transform: scale(1.1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.1);   
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.1);
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+}
+
+.scroll__btn {
+  position: fixed;
+  z-index:3;
+  border: none;
+  background: #000;
+  display:none;
+  opacity: 0.6;
+  width: 3%;
+  cursor: pointer;
+}
+
+.scroll__btn img{
+  width: 15px; 
+}
+
+.left__btn{
+  left: 0
+}
+
+.right__btn{
+  right: 0
+}
+
+@media (max-width: 1200px){
+  .scroll__btn {
+    width: 4%;
+  }
+}
+
+@media (max-width: 768px){
+  .thumb{
+    width: 25%;
+  }
+  .scroll__btn {
+    width: 7%;
+  }
+}
+
+@media (max-width: 390px){
+  .thumb{
+    width: 40%;
+  }
+  .scroll__btn {
+    width: 10%;
+  }
+}

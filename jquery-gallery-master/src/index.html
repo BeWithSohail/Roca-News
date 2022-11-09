@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+	    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	    crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class = "spinner">
+      <img src ="img/loader.gif">
+    </div>
+    <div class = "container">
+      <div class = "gallery">
+
+        <div class = "gallery__view">
+          <div class = "gallery__thumbs-wrapper">
+            <button class = "scroll__btn left__btn">
+              <img src = "img/left-button.png" alt = "left" width = "25px" height = "45px">
+            </button>
+            <button class = "scroll__btn right__btn">
+              <img src = "img/right-button.png" alt = "left" width = "25px" height = "45px">
+            </button>
+
+            <div class = "gallery__thumbs">
+              <!-- Rendering thumbs with jQuery-->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <script src = "index.js"></script>
+  </body>
+</html>
